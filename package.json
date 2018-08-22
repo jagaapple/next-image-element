@@ -1,0 +1,37 @@
+{
+  "name": "next-image-element",
+  "version": "0.0.1",
+  "description": "Import React element or file path from images in Next.js.",
+  "keywords": [
+    "Next.js",
+    "React",
+    "JSX",
+    "images",
+    "PNG",
+    "JPEG",
+    "GIF",
+    "SVG"
+  ],
+  "homepage": "https://github.com/jagaapple/next-image-element",
+  "bugs": "https://github.com/jagaapple/next-image-element/issues",
+  "license": "MIT",
+  "author": "Jaga Apple",
+  "contributors": [],
+  "files": [],
+  "main": "index.js",
+  "bin": "",
+  "man": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jagaapple/next-image-element.git"
+  },
+  "scripts": {},
+  "config": {},
+  "dependencies": {},
+  "devDependencies": {},
+  "peerDependencies": {},
+  "engines": {},
+  "engineStrict": false,
+  "preferGlobal": false,
+  "private": false
+}
