@@ -476,8 +476,8 @@ q@^1.4.1:
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
 
 react-image-element-loader@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/react-image-element-loader/-/react-image-element-loader-1.0.0.tgz#860612abf242057c3c8adf9c6b1ec06c96243b2b"
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-image-element-loader/-/react-image-element-loader-1.0.1.tgz#a8488aaf0fbe62a703ca42c0f07ccc2a69b97161"
   dependencies:
     babel-core "^6.26.3"
     babel-plugin-syntax-jsx "^6.18.0"
