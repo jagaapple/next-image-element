@@ -29,7 +29,9 @@
     "fix": "prettier --write \"./**/*.js\""
   },
   "config": {},
-  "dependencies": {},
+  "dependencies": {
+    "react-image-element-loader": "^1.0.0"
+  },
   "devDependencies": {
     "prettier": "^1.14.2"
   },
