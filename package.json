@@ -17,7 +17,15 @@
   "license": "MIT",
   "author": "Jaga Apple",
   "contributors": [],
-  "files": [],
+  "files": [
+    ".gitignore",
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "index.js",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
   "main": "index.js",
   "bin": "",
   "man": "",
