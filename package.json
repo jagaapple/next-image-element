@@ -30,7 +30,7 @@
   },
   "config": {},
   "dependencies": {
-    "react-image-element-loader": "^1.0.0"
+    "react-image-element-loader": "^1.1.0"
   },
   "devDependencies": {
     "prettier": "^1.14.2"
