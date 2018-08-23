@@ -24,7 +24,7 @@ module.exports = (nextConfig = {}) => {
           fallback: {
             loader: "file-loader",
             options: {
-              publicPath: `${imageElementOptions.pathPrefix}/_next/static/images/`,
+              publicPath: `${imageElementOptions.pathPrefix || ""}/_next/static/images/`,
               outputPath: `${isServer ? "../" : ""}static/images/`,
               name: "[name]-[hash].[ext]",
             },
