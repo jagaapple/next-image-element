@@ -1,8 +1,6 @@
 // =============================================================================================================================
 // INDEX
 // =============================================================================================================================
-const reactImageElementLoader = require("react-image-element-loader");
-
 module.exports = (nextConfig = {}) => {
   return Object.assign({}, nextConfig, {
     webpack(config, options) {
@@ -18,7 +16,7 @@ module.exports = (nextConfig = {}) => {
       // Set a loader.
       config.module.rules.push({
         test: /\.(png|jpe?g|gif|svg)$/,
-        loader: reactImageElementLoader,
+        loader: "react-image-element-loader",
         options: {
           sizeLimit: imageElementOptions.sizeLimit,
           fallback: {
