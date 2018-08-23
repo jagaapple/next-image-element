@@ -1,6 +1,6 @@
 {
   "name": "next-image-element",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Import React element or file path from images in Next.js.",
   "keywords": [
     "Next.js",
@@ -17,7 +17,15 @@
   "license": "MIT",
   "author": "Jaga Apple",
   "contributors": [],
-  "files": [],
+  "files": [
+    ".gitignore",
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "index.js",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
   "main": "index.js",
   "bin": "",
   "man": "",
