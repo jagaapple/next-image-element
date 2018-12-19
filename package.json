@@ -24,6 +24,7 @@
     "index.js",
     "LICENSE",
     "package.json",
+    "package-lock.json",
     "README.md"
   ],
   "main": "index.js",
