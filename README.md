@@ -79,7 +79,7 @@ $ yarn add next-image-element
 ```
 
 ### Setup
-At first, setup your Next.js settings.
+First, setup your Next.js settings.
 
 ```js
 // next.config.js
