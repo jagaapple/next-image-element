@@ -1,0 +1,37 @@
+{
+  "env": { "browser": true, "node": true, "es6": true },
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "plugin:react/recommended"
+  ],
+  "plugins": [
+    "import",
+    "react"
+  ],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": { "jsx": true }
+  },
+  "settings": {
+    "react": { "pragma": "React", "version": "16.12" }
+  },
+  "rules": {
+    "import/no-self-import": "error",
+    "import/no-cycle": "error",
+    "import/no-useless-path-segments": "error",
+    "import/no-relative-parent-imports": "error",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "react/button-has-type": "error",
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "react/display-name": "off",
+    "react/jsx-curly-brace-presence": ["error", "never"],
+    "arrow-body-style": ["error", "as-needed"],
+    "sort-imports": ["error", {
+      "ignoreCase": true,
+      "ignoreDeclarationSort": true
+    }]
+  }
+}

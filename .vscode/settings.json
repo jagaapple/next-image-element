@@ -32,7 +32,10 @@
   // Language Setings
   // ---------------------------------------------------------------------------------------------------------------------------
   "[javascript]": {
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": true
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": true
   }
 
 }
