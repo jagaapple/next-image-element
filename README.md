@@ -1,11 +1,24 @@
-# next-image-element (Next.js + React friendly images importing)
+<h1 align="center">next-image-element</h1>
 
-[![npm](https://img.shields.io/npm/v/next-image-element.svg)](https://www.npmjs.com/package/next-image-element)
-[![license](https://img.shields.io/github/license/jagaapple/next-image-element.svg)](https://opensource.org/licenses/MIT)
-[![@jagaapple_tech](https://img.shields.io/badge/contact-%40jagaapple_tech-blue.svg)](https://twitter.com/jagaapple_tech)
+<h4 align="center">🖼️ Import paths or React elements from images in Next.js. 📦</h4>
 
-Import React element or file path from images in [Next.js](https://github.com/zeit/next.js).
+```jsx
+import { element as LogoSVG } from "./logo.svg";
+import photoImagePath from "./photo.jpg";
 
+export default (props) => (
+  <div>
+    <LogoSVG width="230" height="140" fill={props.color} />
+    <img src={photoImagePath} alt="flower" />
+  </div>
+);
+```
+
+<div align="center">
+<a href="https://www.npmjs.com/package/next-image-element"><img src="https://img.shields.io/npm/v/next-image-element.svg" alt="npm"></a>
+<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/github/license/jagaapple/next-image-element.svg" alt="license"></a>
+<a href="https://twitter.com/jagaapple_tech"><img src="https://img.shields.io/badge/contact-%40jagaapple_tech-blue.svg" alt="@jagaapple_tech"></a>
+</div>
 
 ## Table of Contents
 
@@ -30,41 +43,21 @@ Import React element or file path from images in [Next.js](https://github.com/ze
 
 
 ## Features
-```jsx
-import styled from "styled-components";
-import PhotoImage, { path as photoImagePath } from "./photo.jpg";
-import LogoImage, { path as logoImagePath } from "./logo.svg";
 
-const ContainerElement = styled.div`
-  background-image: url("${photoImagePath}");
-`;
-
-export default () => (
-  <ContainerElement>
-    <PhotoImage alt="flower" />
-    <LogoImage width="230" height="140" />
-  </ContainerElement>
-);
-```
-
-- Import images as inline images (Base 64) using JavaScript Module Syntax ( `import` or `require` )
-  - When the image exceeds a specified size limit, it returns actual URL
-- Import raster images as React element `<img src="xxx" />` using JavaScript Module Syntax
-  - It is possible to pass HTMLAttributes props such as `alt`
-- Import SVG images as React element `<svg>...</svg>` using JavaScript Module Syntax
-  - It is possible to pass SVGAttributes props such as `fill`
-- Supports type definitions for images for TypeScript
-  - You should configure, see more detail [here](#enables-type-definitions-for-import-syntax-for-typescript)
-- Ready for Next.js
+| FEATURES                      | WHAT YOU CAN DO                                              |
+|-------------------------------|--------------------------------------------------------------|
+| ⚛️ **Designed for JSX**        | Import images as React element like `<MySVG fill={color} />` |
+| ✨ **Exported as plain image** | Import image paths or as inline image (Base64)               |
+| 🎩 **Type Safe**              | You can use with TypeScript                                  |
+| 🔧 **Built for Next.js**      | It's very easy to setup                                      |
 
 
 ## Quick Start
 ### Requirements
 - npm or Yarn
-- Next.js version 5.0.0 or higher
+- Next.js 5.0.0 or higher
 
 ### Installation
-
 ```bash
 $ npm install --save next-image-element
 ```
@@ -76,7 +69,7 @@ $ yarn add next-image-element
 ```
 
 ### Setup
-First, setup your Next.js settings.
+Firstly setup your Next.js settings.
 
 ```js
 // next.config.js
@@ -85,6 +78,8 @@ const withImageElement = require("next-image-element");
 module.exports = withImageElement();
 ```
 
+All you need is the above!
+
 
 ## Usage
 This package depends on [react-image-element-loader](https://github.com/jagaapple/react-image-element-loader), for more detail,
@@ -92,34 +87,22 @@ see [here](https://github.com/jagaapple/react-image-element-loader#usage).
 
 ---
 
-You can import images as React element `<img />` or `<svg>...</svg>` . It is possible to pass some attribute, but `src`
-will be ignored.
+You can import file path or React element from images. It's possible to pass props such as HTMLAttributes, but `src` will be ignored.
+
 
 ```jsx
-import PhotoImage, { path as photoImagePath } from "./photo.jpg";
-import LogoImage, { path as logoImagePath } from "./logo.svg";
+import { element as LogoSVG } from "./logo.svg";
+import photoImagePath from "./photo.jpg";
 
-export default () => (
+export default (props) => (
   <div>
-    <PhotoImage />
-    <PhotoImage width="100" alt="flower" />
-    <img src={logoImagePath} />
-
-    <LogoImage width="230" height="140" />
-    <LogoImage fill="red" />
-    <img src={photoImagePath} />
-
-    {/* src will be ignored. */}
-    <PhotoImage src="other-image.jpg" />
+    <LogoSVG width="230" height="140" fill={props.color} />
+    <img src={photoImagePath} alt="flower" />
   </div>
 );
 ```
 
-Raster images supported by next-image-element are PNG (.png), JPEG (.jpg), and GIF (.gif).
-
-In generally, `path` is an actual image URL (through [file-loader](https://github.com/webpack-contrib/file-loader)). When you
-use `sizeLimit` option and the image is smaller than `sizeLimit` , `path` is inline image (Base64 encoded URL). For more detail,
-see [`sizeLimit` option](#sizelimit).
+next-image-element supports PNG (.png), JPEG (.jpg), GIF (.gif), and SVG (.svg).
 
 
 ## Options
@@ -128,11 +111,11 @@ Type: `Number` Default: `undefined`
 
 A number specifying the maximum size of an image file in bytes.
 
-If the image is greater than the limit or `sizeLimit` option is specified `undefined`, `path` is actual URL. In that case,
+If the image is greater than the limit or `sizeLimit` option specified `undefined`, `path` will be an actual URL. In that case,
 [file-loader](https://github.com/webpack-contrib/file-loader) is used by default and all query parameters are passed to it.
 Using an alternative to file-loader is enabled via the `fallback` option.
 
-If the image is smaller than the limit, `path` is Base64 encoded URL.
+If the image is smaller than the limit, `path` will be a Base64 encoded URL.
 
 ```js
 // next.config.js
@@ -194,4 +177,4 @@ Please read [Contributing Guidelines](./.github/CONTRIBUTING.md) before developm
 ## License
 The library is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
-Copyright 2018 Jaga Apple. All rights reserved.
+Copyright 2019 Jaga Apple. All rights reserved.
