@@ -35,7 +35,7 @@ export default (props) => (
   - [`sizeLimit`](#sizelimit)
   - [`pathPrefix`](#pathprefix)
 - [Recipes](#recipes)
-  - [Enables type definitions for `import` syntax for TypeScript](#enables-type-definitions-for-import-syntax-for-typescript)
+  - [Enables type definitions for TypeScript](#enables-type-definitions-for-typescript)
 - [Contributing to next-image-element](#contributing-to-next-image-element)
 - [License](#license)
 
@@ -150,7 +150,7 @@ module.exports = withImageElement({
 ## Recipes
 For more detail, see [here](https://github.com/jagaapple/react-image-element-loader#recipes).
 
-### Enables type definitions for `import` syntax for TypeScript
+### Enables type definitions for TypeScript
 If you want to enable type definitions for TypeScript, you should add `"react-image-element-loader"` to your `tsconfig.json`
 file.
 
