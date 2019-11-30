@@ -1,6 +1,3 @@
-<!-- ======================================================================================================================= -->
-<!-- README                                                                                                                  -->
-<!-- ======================================================================================================================= -->
 # next-image-element (Next.js + React friendly images importing)
 
 [![npm](https://img.shields.io/npm/v/next-image-element.svg)](https://www.npmjs.com/package/next-image-element)

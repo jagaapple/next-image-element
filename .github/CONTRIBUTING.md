@@ -1,6 +1,3 @@
-<!-- ======================================================================================================================= -->
-<!-- GITHUB - CONTRIBUTING                                                                                                   -->
-<!-- ======================================================================================================================= -->
 # Contributing Guidelines
 ## Language
 Git branch names and commit messages, and GitHub pull request should be written in English in order to be readable for
@@ -41,11 +38,12 @@ message.
 | TYPE     | USE CASE                                                  | COMMENTS                                                                      |
 |:---------|:----------------------------------------------------------|:------------------------------------------------------------------------------|
 | `Add`    | Implement functions/Add files/Support new platform        |                                                                               |
-| `Change` | Change current spec                                        | Use this type when breaking changes are happened, otherwise DO NOT use.       |
+| `Change` | Change current spec                                       | Use this type when breaking changes are happened, otherwise DO NOT use.       |
 | `Fix`    | Fix bugs                                                  | Use this type when fix bugs, otherwise DO NOT use.                            |
 | `Modify` | Modify wording                                            | Use this type when breaking changes are not happened and fix other than bugs. |
 | `Clean`  | Refactor some codes/Rename classes, methods, or variables |                                                                               |
 | `Remove` | Remove unneeded files or libraries                        |                                                                               |
+| `Update` | Update dependencies or this project version               |                                                                               |
 
 ```bash
 # Example
@@ -74,7 +72,7 @@ a summary should be expressed one sentence. Also start with upper case.
 [Add] Implement sign up system. Because ...
 ```
 
-### `<DESCRIPTION>`
+### `<DESCRIPTION>` (Optional)
 `<DESCRIPTION>` is a description what was changed in the commit. Start with upper case and write one description line by line,
 also do not include period `.` .
 
