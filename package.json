@@ -1,7 +1,7 @@
 {
   "name": "next-image-element",
   "version": "1.0.0",
-  "description": "Import React element or file path from images in Next.js.",
+  "description": "Import paths or React elements from images in Next.js.",
   "keywords": [
     "Next.js",
     "React",
@@ -18,16 +18,14 @@
   "author": "Jaga Apple",
   "contributors": [],
   "files": [
-    ".gitignore",
+    "lib",
     "CHANGELOG.md",
     "CODE_OF_CONDUCT.md",
-    "index.js",
     "LICENSE",
     "package.json",
-    "package-lock.json",
     "README.md"
   ],
-  "main": "index.js",
+  "main": "lib/index.js",
   "bin": "",
   "man": "",
   "repository": {
@@ -35,14 +33,18 @@
     "url": "https://github.com/jagaapple/next-image-element.git"
   },
   "scripts": {
-    "fix": "prettier --write \"./**/*.js\""
+    "lint": "eslint ./lib/**/*.js",
+    "fix": "eslint --fix ./lib/**/*.js"
   },
   "config": {},
   "dependencies": {
     "react-image-element-loader": "^1.1.0"
   },
   "devDependencies": {
-    "prettier": "^1.14.2"
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "prettier": "^1.19.1"
   },
   "peerDependencies": {},
   "engines": {},
