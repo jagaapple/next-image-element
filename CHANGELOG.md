@@ -4,6 +4,9 @@
   - For more detail, see [here](https://github.com/jagaapple/react-image-element-loader/releases/tag/v2.0.0)
 - Update dependencies
 - Add an example project
+- Improve development envrironment
+  - Add ESLint
+  - Add CircleCI settings
 - Modify a readme
 
 ## 1.0.0 (2018-08-23)
