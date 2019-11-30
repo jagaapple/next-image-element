@@ -1,0 +1,17 @@
+{
+  "env": { "browser": true, "node": true, "es6": true },
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "rules": {
+    "arrow-body-style": ["error", "as-needed"],
+    "sort-imports": ["error", {
+      "ignoreCase": true,
+      "ignoreDeclarationSort": true
+    }]
+  }
+}
