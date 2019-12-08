@@ -44,7 +44,6 @@ export default (props) => (
 
 
 ## Features
-
 | FEATURES                      | WHAT YOU CAN DO                                              |
 |-------------------------------|--------------------------------------------------------------|
 | ⚛️ **Designed for JSX**        | Import images as React element like `<MySVG fill={color} />` |
