@@ -1,6 +1,6 @@
 {
   "name": "next-image-element",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Import paths or React elements from images in Next.js.",
   "keywords": [
     "Next.js",
@@ -21,6 +21,7 @@
     "lib",
     "CHANGELOG.md",
     "CODE_OF_CONDUCT.md",
+    "index.d.ts",
     "LICENSE",
     "package.json",
     "README.md"
@@ -38,7 +39,7 @@
   },
   "config": {},
   "dependencies": {
-    "react-image-element-loader": "^2.0.1"
+    "react-image-element-loader": "^2.0.2"
   },
   "devDependencies": {
     "eslint": "^6.7.2",

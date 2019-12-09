@@ -1,4 +1,9 @@
 # Changelog
+## 2.0.2 (2019-12-10)
+- Update dependencies #17 - [@jagaapple](https://github.com/jagaapple)
+- Fix type definition #19 - [@jagaapple](https://github.com/jagaapple)
+- Fix codes in readme
+
 ## 2.0.1 (2019-12-08)
 - Update dependencies #16 - [@jagaapple](https://github.com/jagaapple)
 - Improve development environment
