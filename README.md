@@ -151,14 +151,14 @@ module.exports = withImageElement({
 For more detail, see [here](https://github.com/jagaapple/react-image-element-loader#recipes).
 
 ### Enables type definitions for TypeScript
-If you want to enable type definitions for TypeScript, you should add `"react-image-element-loader"` to your `tsconfig.json`
+If you want to enable type definitions for TypeScript, you should add `"next-image-element"` to your `tsconfig.json`
 file.
 
 ```json
 {
   "compilerOptions": {
     "types": [
-      "react-image-element-loader"
+      "next-image-element"
     ]
   }
 }
