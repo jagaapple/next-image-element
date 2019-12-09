@@ -59,13 +59,13 @@ export default (props) => (
 
 ### Installation
 ```bash
-$ npm install --save next-image-element
+$ npm install -D next-image-element
 ```
 
 If you are using Yarn, use the following command.
 
 ```bash
-$ yarn add next-image-element
+$ yarn add -D next-image-element
 ```
 
 ### Setup
