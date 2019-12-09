@@ -21,6 +21,7 @@
     "lib",
     "CHANGELOG.md",
     "CODE_OF_CONDUCT.md",
+    "index.d.ts",
     "LICENSE",
     "package.json",
     "README.md"
