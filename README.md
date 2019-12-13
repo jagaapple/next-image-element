@@ -36,7 +36,7 @@ export default (props) => (
   - [`sizeLimit`](#sizelimit)
   - [`pathPrefix`](#pathprefix)
 - [Recipes](#recipes)
-  - [Enables type definitions for TypeScript](#enables-type-definitions-for-typescript)
+  - [Gets type definitions for TypeScript](#gets-type-definitions-for-typescript)
 - [Contributing to next-image-element](#contributing-to-next-image-element)
 - [License](#license)
 
@@ -150,18 +150,15 @@ module.exports = withImageElement({
 ## Recipes
 For more detail, see [here](https://github.com/jagaapple/react-image-element-loader#recipes).
 
-### Enables type definitions for TypeScript
-If you want to enable type definitions for TypeScript, you should add `"next-image-element"` to your `tsconfig.json`
-file.
+### Gets type definitions for TypeScript
+If you want to enable type checking for TypeScript, you should add the following to `next-env.d.ts` file.
 
-```json
-{
-  "compilerOptions": {
-    "types": [
-      "next-image-element"
-    ]
-  }
-}
+```ts
+/// <reference types="next" />
+/// <reference types="next/types/global" />
+
+// Add this.
+/// <reference types="next-image-element" />
 ```
 
 
