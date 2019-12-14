@@ -112,13 +112,11 @@ next-image-element supports PNG (.png), JPEG (.jpg), GIF (.gif), and SVG (.svg).
 ### `sizeLimit`
 Type: `Number` Default: `undefined`
 
-A number specifying the maximum size of an image file in bytes.
+This option is to specify the maximum size of image file in bytes.
 
-If the image is greater than the limit or `sizeLimit` option specified `undefined`, `path` will be an actual URL. In that case,
-[file-loader](https://github.com/webpack-contrib/file-loader) is used by default and all query parameters are passed to it.
-Using an alternative to file-loader is enabled via the `fallback` option.
-
-If the image is smaller than the limit, `path` will be a Base64 encoded URL.
+If an image is greater than the limit or `sizeLimit` option specified `undefined`, `path` will be an actual URL. In that case,
+[file-loader](https://github.com/webpack-contrib/file-loader) will be used and all query parameters are passed to it.
+If an image is smaller than the limit, `path` will be Base64 encoded URL.
 
 ```js
 module.exports = withImageElement({
@@ -133,8 +131,8 @@ The limit can be specified via loader options and defaults to no limit.
 ### `publicPath`
 Type: `String` Default: `"/_next/static/images/"`
 
-This option is to specify published image path used as actual URL. When you use next-image-element in Next.js projects, you should start with
-`"/_next/static/"` .
+This option is to specify published image path used as actual URL. When you use next-image-element in Next.js projects, you
+should start with `"/_next/static/"` .
 
 ```js
 module.exports = withImageElement({
@@ -149,7 +147,7 @@ Type: `String` or `Function` Default: ``(isServer) => `${isServer ? "../" : ""}s
 
 This option is to specify output image path. If you give string as this option, next-image-element will just use it. If you give
 function as this option, next-image-element will call it with `isServer` boolean value as the first argument, so you have to
-function which returns string in this case.
+give function which returns string in this case.
 
 ```js
 module.exports = withImageElement({
@@ -162,7 +160,7 @@ module.exports = withImageElement({
 ### `outputFileNamePattern`
 Type: `String` Default: `"[name]-[hash].[ext]"`
 
-This option is specify a pattern of images' file name. For more detail, please check [this](https://github.com/webpack-contrib/file-loader#placeholders).
+This option is to specify a pattern of images' file name. For more detail, please check [this](https://github.com/webpack-contrib/file-loader#placeholders).
 
 ```js
 module.exports = withImageElement({
@@ -179,7 +177,7 @@ For more detail, see [here](https://github.com/jagaapple/react-image-element-loa
 ### Enables type checking in TypeScript
 If you want to enable type checking in TypeScript for images, you should add the following to `next-env.d.ts` file.
 
-```ts
+```diff
 /// <reference types="next" />
 /// <reference types="next/types/global" />
 
