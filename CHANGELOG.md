@@ -2,6 +2,9 @@
 ## 3.0.0 (2019-12-14)
 - Modify the type definitions section in readme #20 - [@jagaapple](https://github.com/jagaapple)
 - Renew some options #23 - [@jagaapple](https://github.com/jagaapple)
+  - Add `publicPath` , `outputPath` , and `outputFileNamePattern` options
+  - Remove `options.defaultLoaders` existence checking
+  - Delete `pathPrefix` option, please use `publicPath` instead
 
 ## 2.0.2 (2019-12-10)
 - Update dependencies #17 - [@jagaapple](https://github.com/jagaapple)
