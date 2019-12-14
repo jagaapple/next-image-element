@@ -34,9 +34,12 @@ export default (props) => (
 - [Usage](#usage)
 - [Options](#options)
   - [`sizeLimit`](#sizelimit)
-  - [`pathPrefix`](#pathprefix)
+  - [`publicPath`](#publicpath)
+  - [`outputPath`](#outputpath)
+  - [`outputFileNamePattern`](#outputfilenamepattern)
 - [Recipes](#recipes)
-  - [Gets type definitions for TypeScript](#gets-type-definitions-for-typescript)
+  - [Enables type checking in TypeScript](#enables-type-checking-in-typescript)
+  - [Uses in other libraries such as Storybook](#uses-in-other-libraries-such-as-storybook)
 - [Contributing to next-image-element](#contributing-to-next-image-element)
 - [License](#license)
 
@@ -118,30 +121,53 @@ Using an alternative to file-loader is enabled via the `fallback` option.
 If the image is smaller than the limit, `path` will be a Base64 encoded URL.
 
 ```js
-// next.config.js
-const withImageElement = require("next-image-element");
-
 module.exports = withImageElement({
   imageElementOptions: {
-    sizeLimit: 10240,
+    sizeLimit: 10240, // 10kB
   },
 });
 ```
 
 The limit can be specified via loader options and defaults to no limit.
 
-### `pathPrefix`
-Type: `String` Default: `""`
+### `publicPath`
+Type: `String` Default: `"/_next/static/images/"`
 
-Specifies outputted image path prefix.
+This option is to specify published image path used as actual URL. When you use next-image-element in Next.js projects, you should start with
+`"/_next/static/"` .
 
 ```js
-// next.config.js
-const withImageElement = require("next-image-element");
-
 module.exports = withImageElement({
   imageElementOptions: {
-    pathPrefix: "dist",
+    publicPath: "/static/images/",
+  },
+});
+```
+
+### `outputPath`
+Type: `String` or `Function` Default: ``(isServer) => `${isServer ? "../" : ""}static/images/``
+
+This option is to specify output image path. If you give string as this option, next-image-element will just use it. If you give
+function as this option, next-image-element will call it with `isServer` boolean value as the first argument, so you have to
+function which returns string in this case.
+
+```js
+module.exports = withImageElement({
+  imageElementOptions: {
+    outputPath: "/static/images/",
+  },
+});
+```
+
+### `outputFileNamePattern`
+Type: `String` Default: `"[name]-[hash].[ext]"`
+
+This option is specify a pattern of images' file name. For more detail, please check [this](https://github.com/webpack-contrib/file-loader#placeholders).
+
+```js
+module.exports = withImageElement({
+  imageElementOptions: {
+    outputFileNamePattern: "[hash].[ext]",
   },
 });
 ```
@@ -150,15 +176,27 @@ module.exports = withImageElement({
 ## Recipes
 For more detail, see [here](https://github.com/jagaapple/react-image-element-loader#recipes).
 
-### Gets type definitions for TypeScript
-If you want to enable type checking for TypeScript, you should add the following to `next-env.d.ts` file.
+### Enables type checking in TypeScript
+If you want to enable type checking in TypeScript for images, you should add the following to `next-env.d.ts` file.
 
 ```ts
 /// <reference types="next" />
 /// <reference types="next/types/global" />
 
-// Add this.
-/// <reference types="next-image-element" />
++ /// <reference types="next-image-element" />
+```
+
+### Uses in other libraries such as Storybook
+Libraries such as Storybook outside Next.js does not load `_next` directory automatically, but next-image-element uses `_next`
+as published image path by default. So if you change the public path, the library can load images.
+
+```js
+// storybook/webpack.config.js
+module.exports = async ({ config }) => {
+  withImageElement({ imageElementOptions: { publicPath: "/static/images/" }}).webpack(config, { isServer: false });
+
+  return config;
+};
 ```
 
 
