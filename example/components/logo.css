@@ -1,8 +1,0 @@
-.wrapper {
-  --size: 128px;
-
-  width: var(--size);
-  height: var(--size);
-  background-image: url("../images/polygon.svg");
-  background-size: var(--size) var(--size);
-}
