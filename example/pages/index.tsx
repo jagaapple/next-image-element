@@ -4,12 +4,15 @@ import Head from "next/head";
 import startImagePath, { element as StarImage } from "../images/star.png";
 // eslint-disable-next-line import/no-relative-parent-imports
 import polygonImagePath, { element as PolygonSVG } from "../images/polygon.svg";
+import { Logo } from "../components/logo";
 
 const Page = () => (
   <>
     <Head>
       <title>next-image-element Example</title>
     </Head>
+
+    <Logo />
 
     <h1>Hello, world!</h1>
     <img src={startImagePath} width="256" />
