@@ -1,6 +1,6 @@
 # Changelog
 ## 3.0.1 (2019-12-19)
-- Fix to load from css #26 - [@jagaapple](https://github.com/jagaapple)
+- Fix to load from css #26 #27 - [@jagaapple](https://github.com/jagaapple)
 - Improve development environment
   - Modify VS Code settings to follow latest ESLint extension #24 - [@jagaapple](https://github.com/jagaapple)
 
