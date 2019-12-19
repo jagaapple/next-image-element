@@ -1,4 +1,9 @@
 # Changelog
+## 3.0.1 (2019-12-19)
+- Fix to load from css #26 - [@jagaapple](https://github.com/jagaapple)
+- Improve development environment
+  - Modify VS Code settings to follow latest ESLint extension #24 - [@jagaapple](https://github.com/jagaapple)
+
 ## 3.0.0 (2019-12-14)
 - Modify the type definitions section in readme #20 - [@jagaapple](https://github.com/jagaapple)
 - Renew some options #23 - [@jagaapple](https://github.com/jagaapple)
