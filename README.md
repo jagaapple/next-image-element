@@ -50,6 +50,7 @@ export default (props) => (
 | FEATURES                      | WHAT YOU CAN DO                                              |
 |-------------------------------|--------------------------------------------------------------|
 | ⚛️ **Designed for JSX**        | Import images as React element like `<MySVG fill={color} />` |
+| 🎨 **Designed for CSS**       | Import images as some URL in not JavaScript files            |
 | ✨ **Exported as plain image** | Import image paths or as inline image (Base64)               |
 | 🎩 **Type Safe**              | You can use with TypeScript                                  |
 | 🔧 **Built for Next.js**      | It's very easy to setup                                      |
@@ -103,6 +104,15 @@ export default (props) => (
     <img src={photoImagePath} alt="flower" />
   </div>
 );
+```
+
+Also when you import images from not JavaScript files such as CSS, next-image-element imports them as same as using default
+export, so it will be actual URL or inline image (Base64).
+
+```css
+.box {
+  background-image: url("./icon.png");
+}
 ```
 
 next-image-element supports PNG (.png), JPEG (.jpg), GIF (.gif), and SVG (.svg).
