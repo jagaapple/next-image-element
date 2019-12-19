@@ -1,6 +1,6 @@
 {
   "name": "next-image-element",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Import paths or React elements from images in Next.js.",
   "keywords": [
     "Next.js",
