@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.star, .polygon {
+  --size: 128px;
+
+  width: var(--size);
+  height: var(--size);
+  background-size: var(--size) var(--size);
+}
+.star {
+  background-image: url("../images/star.png");
+}
+.polygon {
+  background-image: url("../images/polygon.svg");
+}

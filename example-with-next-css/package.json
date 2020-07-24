@@ -1,0 +1,22 @@
+{
+  "name": "next-image-element-example",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "9.1.4",
+    "next-image-element": "file:../",
+    "react": "16.12.0",
+    "react-dom": "16.12.0"
+  },
+  "private": true,
+  "devDependencies": {
+    "@types/node": "^12.12.16",
+    "@types/react": "^16.9.16",
+    "@zeit/next-css": "^1.0.1",
+    "typescript": "^3.7.3"
+  }
+}
