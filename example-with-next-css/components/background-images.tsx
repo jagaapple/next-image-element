@@ -1,4 +1,4 @@
-import styles from "./background-images.module.css";
+import styles from "./background-images.css";
 
 export const BackgroundImages = () => (
   <div className={styles.wrapper}>

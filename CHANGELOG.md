@@ -1,4 +1,12 @@
 # Changelog
+## 3.0.2 (2020-08-02)
+- Add support for built-in CSS modules #38 - [@jagaapple](https://github.com/jagaapple) [@p-chan](https://github.com/p-chan)
+- Add an example project with `@zeit/next-css` #37
+- Update documents #36
+- Update dependencies #34
+- Improve development environment
+  - Migrate to GitHub Actions #35
+
 ## 3.0.1 (2019-12-19)
 - Fix to load from CSS #26 #27 - [@jagaapple](https://github.com/jagaapple)
 - Improve development environment

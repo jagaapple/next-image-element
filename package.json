@@ -1,6 +1,6 @@
 {
   "name": "next-image-element",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Import paths or React elements from images in Next.js.",
   "keywords": [
     "Next.js",
@@ -40,15 +40,15 @@
   "config": {},
   "dependencies": {
     "react-image-element-loader": "^2.0.2",
-    "url-loader": "^3.0.0"
+    "url-loader": "^4.1.0"
   },
   "devDependencies": {
-    "eslint": "^6.7.2",
-    "eslint-config-prettier": "^6.7.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-prettier": "^3.1.1",
-    "eslint-plugin-react": "^7.17.0",
-    "prettier": "^1.19.1"
+    "eslint": "^7.5.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.3",
+    "prettier": "^2.0.5"
   },
   "peerDependencies": {
     "next": ">=5.0.0"

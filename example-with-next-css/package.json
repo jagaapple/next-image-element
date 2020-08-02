@@ -1,5 +1,5 @@
 {
-  "name": "next-image-element-example",
+  "name": "next-image-element-example-with-next-css",
   "version": "1.0.0",
   "scripts": {
     "dev": "next dev",
@@ -7,15 +7,16 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "9.2.2",
+    "next": "9.1.4",
     "next-image-element": "file:../",
-    "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react": "16.12.0",
+    "react-dom": "16.12.0"
   },
   "private": true,
   "devDependencies": {
-    "@types/node": "^14.0.27",
-    "@types/react": "^16.9.44",
+    "@types/node": "^12.12.16",
+    "@types/react": "^16.9.16",
+    "@zeit/next-css": "^1.0.1",
     "typescript": "^3.7.3"
   }
 }

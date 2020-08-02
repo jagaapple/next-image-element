@@ -16,7 +16,7 @@ export default (props) => (
 
 <div align="center">
 <a href="https://www.npmjs.com/package/next-image-element"><img src="https://img.shields.io/npm/v/next-image-element.svg" alt="npm"></a>
-<a href="https://circleci.com/gh/jagaapple/next-image-element"><img src="https://img.shields.io/circleci/project/github/jagaapple/next-image-element/master.svg" alt="CircleCI"></a>
+<a href="https://github.com/jagaapple/next-image-element/actions"><img src="https://github.com/jagaapple/next-image-element/workflows/Build%20and%20test/badge.svg" alt="GitHub Actions"></a>
 <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/github/license/jagaapple/next-image-element.svg" alt="license"></a>
 <a href="https://twitter.com/jagaapple_tech"><img src="https://img.shields.io/badge/contact-%40jagaapple_tech-blue.svg" alt="@jagaapple_tech"></a>
 </div>
@@ -220,4 +220,4 @@ Please read [Contributing Guidelines](./.github/CONTRIBUTING.md) before developm
 ## License
 The library is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
 
-Copyright 2019 Jaga Apple. All rights reserved.
+Copyright 2020 Jaga Apple. All rights reserved.
