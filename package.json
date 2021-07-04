@@ -37,7 +37,7 @@
   },
   "config": {},
   "dependencies": {
-    "react-image-element-loader": "^2.0.2",
+    "react-image-element-loader": "^2.0.3",
     "url-loader": "^4.1.0"
   },
   "devDependencies": {
