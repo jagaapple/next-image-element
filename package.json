@@ -27,8 +27,6 @@
     "README.md"
   ],
   "main": "lib/index.js",
-  "bin": "",
-  "man": "",
   "repository": {
     "type": "git",
     "url": "https://github.com/jagaapple/next-image-element.git"
