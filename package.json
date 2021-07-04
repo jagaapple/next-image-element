@@ -1,6 +1,6 @@
 {
   "name": "next-image-element",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Import paths or React elements from images in Next.js.",
   "keywords": [
     "Next.js",
@@ -27,8 +27,6 @@
     "README.md"
   ],
   "main": "lib/index.js",
-  "bin": "",
-  "man": "",
   "repository": {
     "type": "git",
     "url": "https://github.com/jagaapple/next-image-element.git"
@@ -39,7 +37,7 @@
   },
   "config": {},
   "dependencies": {
-    "react-image-element-loader": "^2.0.2",
+    "react-image-element-loader": "^2.0.3",
     "url-loader": "^4.1.0"
   },
   "devDependencies": {

@@ -1,4 +1,8 @@
 # Changelog
+## 3.0.3 (2021-07-04)
+- Remove unnecessary fields in package.json #40 - [@jagaapple](https://github.com/jagaapple)
+- Update dependencies
+
 ## 3.0.2 (2020-08-02)
 - Add support for built-in CSS modules #38 - [@jagaapple](https://github.com/jagaapple) [@p-chan](https://github.com/p-chan)
 - Add an example project with `@zeit/next-css` #37
