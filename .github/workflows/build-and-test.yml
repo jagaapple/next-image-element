@@ -1,10 +1,9 @@
 name: "Build and test"
 on:
   push:
-    branches: ["master"]
+    branches: ["main"]
   pull_request: {}
 jobs:
-
   parameters:
     name: "Set parameters"
     runs-on: "ubuntu-latest"
@@ -12,7 +11,7 @@ jobs:
       GITHUB_SHA: "${{ steps.GITHUB_SHA.outputs.GITHUB_SHA }}"
     steps:
       - id: "GITHUB_SHA"
-        run: "echo \"::set-output name=GITHUB_SHA::$GITHUB_SHA\""
+        run: 'echo "::set-output name=GITHUB_SHA::$GITHUB_SHA"'
 
   build:
     name: "Build"
@@ -20,11 +19,11 @@ jobs:
     needs: "parameters"
     strategy:
       matrix:
-        node: ["10.15", "12.13"]
+        node: ["12.13", "14.17", "16.13"]
     steps:
       - uses: "actions/checkout@v2"
       - name: "Use Node.js"
-        uses: "actions/setup-node@v1"
+        uses: "actions/setup-node@v2"
         with:
           node-version: "${{ matrix.node }}"
       - name: "Cache dependencies"
@@ -43,11 +42,11 @@ jobs:
     runs-on: "ubuntu-latest"
     strategy:
       matrix:
-        node: ["10.15", "12.13"]
+        node: ["12.13", "14.17", "16.13"]
     steps:
       - uses: "actions/checkout@v2"
       - name: "Use Node.js"
-        uses: "actions/setup-node@v1"
+        uses: "actions/setup-node@v2"
         with:
           node-version: "${{ matrix.node }}"
       - name: "Restore cached dependencies"
