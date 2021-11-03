@@ -1,14 +1,7 @@
 {
   "env": { "browser": true, "node": true, "es6": true },
-  "extends": [
-    "eslint:recommended",
-    "plugin:prettier/recommended",
-    "plugin:react/recommended"
-  ],
-  "plugins": [
-    "import",
-    "react"
-  ],
+  "extends": ["eslint:recommended", "plugin:react/recommended", "prettier"],
+  "plugins": ["import", "react"],
   "parserOptions": {
     "sourceType": "module",
     "ecmaFeatures": { "jsx": true }
@@ -23,15 +16,43 @@
     "import/no-relative-parent-imports": "error",
     "import/first": "error",
     "import/newline-after-import": "error",
+    "react/boolean-prop-naming": [
+      "error",
+      {
+        "rule": "^(is|has|will|can)[A-Z]([A-Za-z0-9]?)+"
+      }
+    ],
     "react/button-has-type": "error",
-    "react/react-in-jsx-scope": "off",
-    "react/prop-types": "off",
     "react/display-name": "off",
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-boolean-value": ["error", "never"],
     "react/jsx-curly-brace-presence": ["error", "never"],
+    "react/jsx-sort-props": [
+      "error",
+      {
+        "callbacksLast": true,
+        "shorthandFirst": false,
+        "shorthandLast": true,
+        "ignoreCase": false,
+        "noSortAlphabetically": true,
+        "reservedFirst": ["key", "ref"]
+      }
+    ],
     "arrow-body-style": ["error", "as-needed"],
-    "sort-imports": ["error", {
-      "ignoreCase": true,
-      "ignoreDeclarationSort": true
-    }]
+    "sort-imports": [
+      "error",
+      {
+        "ignoreCase": true,
+        "ignoreDeclarationSort": true
+      }
+    ]
   }
 }

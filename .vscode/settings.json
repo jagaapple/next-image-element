@@ -1,5 +1,4 @@
 {
-
   // ---------------------------------------------------------------------------------------------------------------------------
   // Editor
   // ---------------------------------------------------------------------------------------------------------------------------
@@ -7,13 +6,10 @@
   // Works best when 'quickSuggestions' aren't enabled.
   "editor.tabCompletion": "on",
   // Columns at which to show vertical rulers.
-  "editor.rulers": [
-    128
-  ],
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-
+  "editor.rulers": [128],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": ["source.fixAll.eslint", "source.fixAll.stylelint"],
 
   // ---------------------------------------------------------------------------------------------------------------------------
   // Files
@@ -31,27 +27,9 @@
     "**/node_modules/**": true
   },
 
-
   // ---------------------------------------------------------------------------------------------------------------------------
   // Extensions
   // ---------------------------------------------------------------------------------------------------------------------------
   // ESLint
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
-
-
-  // ---------------------------------------------------------------------------------------------------------------------------
-  // Language Setings
-  // ---------------------------------------------------------------------------------------------------------------------------
-  "[javascript]": {
-    "editor.formatOnSave": true
-  },
-  "[javascriptreact]": {
-    "editor.formatOnSave": true
-  }
-
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"]
 }
