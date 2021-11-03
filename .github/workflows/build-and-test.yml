@@ -4,7 +4,6 @@ on:
     branches: ["main"]
   pull_request: {}
 jobs:
-
   parameters:
     name: "Set parameters"
     runs-on: "ubuntu-latest"
@@ -12,7 +11,7 @@ jobs:
       GITHUB_SHA: "${{ steps.GITHUB_SHA.outputs.GITHUB_SHA }}"
     steps:
       - id: "GITHUB_SHA"
-        run: "echo \"::set-output name=GITHUB_SHA::$GITHUB_SHA\""
+        run: 'echo "::set-output name=GITHUB_SHA::$GITHUB_SHA"'
 
   build:
     name: "Build"
@@ -20,7 +19,7 @@ jobs:
     needs: "parameters"
     strategy:
       matrix:
-        node: ["10.15", "12.13"]
+        node: ["12.13", "14.17", "16.13"]
     steps:
       - uses: "actions/checkout@v2"
       - name: "Use Node.js"
@@ -43,7 +42,7 @@ jobs:
     runs-on: "ubuntu-latest"
     strategy:
       matrix:
-        node: ["10.15", "12.13"]
+        node: ["12.13", "14.17", "16.13"]
     steps:
       - uses: "actions/checkout@v2"
       - name: "Use Node.js"
