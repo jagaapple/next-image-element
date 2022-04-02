@@ -1,4 +1,9 @@
 # Changelog
+## 3.0.4 (2022-04-02)
+- **DEPRECATED**
+  - This package has been deprecated and recommend to use [@svgr/webpack](https://react-svgr.com/docs/webpack/) instead.
+  - webpack 5 has breaking changes and it's impossible to implement the current features of next-image-element for webpack 5.
+
 ## 3.0.3 (2021-07-04)
 - Remove unnecessary fields in package.json #40 - [@jagaapple](https://github.com/jagaapple)
 - Update dependencies
