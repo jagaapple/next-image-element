@@ -1,3 +1,7 @@
+> 💀 **This package has been deprecated.**
+> This package has been deprecated and recommend to use [@svgr/webpack](https://react-svgr.com/docs/webpack/) instead.
+---
+
 <h1 align="center">next-image-element</h1>
 
 <h4 align="center">🖼️ Import paths or React elements from images in Next.js. 📦</h4>
